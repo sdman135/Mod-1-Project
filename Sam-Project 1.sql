@@ -46,5 +46,5 @@ FROM Movies.OMDb_Top_250_and_Low_100  m
 INNER JOIN Movies.OMDb_Actors l on m.movie_name = l.movie_name
 INNER JOIN Movies.The_Movie_Db  a on m.movie_name = a.movie_name
 group by l.actors
-order by l.actors
+order by avg(a.revenue)
 ;
